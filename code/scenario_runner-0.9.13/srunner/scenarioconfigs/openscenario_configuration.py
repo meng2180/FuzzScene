@@ -199,7 +199,6 @@ class OpenScenarioConfiguration(ScenarioConfiguration):
                                                                  additional_width=extra_width,
                                                                  smooth_junctions=True,
                                                                  enable_mesh_visibility=True))
-                print("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSs")
             else:
                 self.logger.warning(" Wrong map in use. Forcing reload of CARLA world")
                 self.client.load_world(self.town)

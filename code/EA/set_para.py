@@ -3,7 +3,7 @@ import sys, os, shutil
 model_name = sys.argv[1]
 if_sampling = "False" if sys.argv[2] == "0" else "True"
 fit = ['all', 'err', 'div']
-fitness_func = fit[(int)(sys.argv[3]) - 1]
+fitness_func = fit[int(sys.argv[3]) - 1]
 fitness = sys.argv[3]
 print(model_name + "_" + if_sampling + "_" + fitness_func)
 
@@ -42,11 +42,11 @@ new2 = []
 for line in f2:
     new2.append(line)
 f2.close()
-new2[12] = 'if_sampling = ' + if_sampling + '\n'
+new2[11] = 'if_sampling = ' + if_sampling + '\n'
 if fitness == "1" and if_sampling == "True":
-    new2[13] = 'is_err_collection = 1' + '\n'
+    new2[12] = 'is_err_collection = 1' + '\n'
 else:
-    new2[13] = 'is_err_collection = 0' + '\n'
+    new2[12] = 'is_err_collection = 0' + '\n'
 f2 = open("./fuzz_ga.py", "w+")
 for n in new2:
     f2.write(n)
@@ -63,7 +63,7 @@ new3 = []
 for line in f3:
     new3.append(line)
 f3.close()
-new3[246] = "\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20" + fitness + '\n'
+new3[239] = "\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20" + fitness + '\n'
 f3 = open("./ga.py", "w+")
 for n in new3:
     f3.write(n)
@@ -74,9 +74,9 @@ new4 = []
 for line in f4:
     new4.append(line)
 f4.close()
-new4[3] = 'model_name = "' + model_name + '"\n'
-new4[4] = 'if_sampling = "' + if_sampling + '"\n'
-new4[5] = 'fitness_func = "' + fitness_func + '"\n'
+new4[2] = 'model_name = "' + model_name + '"\n'
+new4[3] = 'if_sampling = "' + if_sampling + '"\n'
+new4[4] = 'fitness_func = "' + fitness_func + '"\n'
 f4 = open("./rename.py", "w+")
 for n in new4:
     f4.write(n)

@@ -19,12 +19,10 @@ def fuzzscene_f1(x, pop_seed_name, error_number, choose_time, list_er, data_coll
         for i in range(len(list_er)):
             if iterate != 0:
                 d[seed_number - 1, int(list_er[i])] = d[seed_number - 1, int(list_er[i])] * 0.5
-            print(error_number, div)
 
         if data_collection_para[0]:
             for i in range(len(list_er)):
                 e[seed_number - 1, int(list_er[i])] += 1
-            print(error_number, div)
             np.savetxt("entropy.txt", e)
 
     for i in range(len(list_er)):
@@ -56,7 +54,7 @@ def cal_entropy(metrix):
     return entropy
 
 
-def cal_fitness(R):  # @author Jlutripper
+def cal_fitness(R):
     b = np.loadtxt("entropy.txt")
     ori_entropy = cal_entropy(b)
     temp_metrix = np.random.random_integers(1, 1, size=(6, 125))
@@ -73,7 +71,6 @@ def cal_fitness(R):  # @author Jlutripper
             for i in range(len(list_er)):
                 b[seed_number - 1, int(list_er[i])] += 1
             entropy = cal_entropy(b)
-        print(r.f)
         if len(r.f) < 3:
             r.f.append(entropy - ori_entropy)
         else:

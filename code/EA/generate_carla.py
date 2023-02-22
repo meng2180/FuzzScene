@@ -112,7 +112,6 @@ def envRandomization(mut_date, mut_time, mut_fog, mut_precipitation, mut_sun_int
 
 
 def Simulation(rand_para, var_map, e, s):
-    print(rand_para)
     vehicleRandomization("adversary", rand_para[0], rand_para[1], rand_para[2], var_map, e)
     envRandomization(rand_para[3], rand_para[4], rand_para[5], rand_para[6], rand_para[7], var_map, s)
 
@@ -139,7 +138,6 @@ def ga_sim(color1, color2, color3, time1, time2, fog, rain, sun, seed_name, data
     variable = {"name": "origin & random parameters"}
     rand_para = [color1, color2, color3, time1, time2, fog, rain, sun]
     Simulation(rand_para, variable, e, s)
-    # print(variable)
     writeBack(xml_path, DOMTree)
     os.system("bash ./ga_sim.sh " + seed_name)
     data_collection_para = str(data_collection_para[0]) + ',' + str(data_collection_para[1]) + ',' + str(

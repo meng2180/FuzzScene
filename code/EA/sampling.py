@@ -22,7 +22,6 @@ def sample_simulate(color1, color2, color3, time1, time2, fog, rain, sun, seed_n
     variable = {"name": "origin & random parameters"}
     rand_para = [color1, color2, color3, time1, time2, fog, rain, sun]
     Simulation(rand_para, variable, e, s)
-    # print(variable)
     writeBack(xml_path, DOMTree)
     os.system("bash ./ga_sim.sh " + seed_name)
     sample_predict = prenum(model_name, seed_number)

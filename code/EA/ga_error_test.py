@@ -181,8 +181,6 @@ def error_test():
         ',')  # data_collection_para : [is_new_seed(for entropy), is_err_collection(collect err or not), err_type(collect normal(1)/sampling(2)/random data(3))]
     is_err_collection = data_collection_para[1]
     err_type = data_collection_para[2]
-
-    print(seed_number, seed_number, seed_number)
     dataset_path = '../train_carla/'
     test_dataset_path = '../scenario_runner-0.9.13/_out/'
     with open(test_dataset_path + 'label_test.csv', 'r') as f:
@@ -369,7 +367,6 @@ def error_test():
         test_x, test_y = next(test_generator)
         yhat = model.predict(test_x)
         print("--------EPOCH PREDICT COMPLETE-------")
-    #print(yhat)
     loss = calc_mse(yhat, test_y)
     # --------------------------------------FIND ERROR---------------------------------------- #
     filelist_list = []
@@ -432,10 +429,8 @@ def error_test():
             timestr = time.strftime("%Y%m%d-%H%M%S")
             csv_writer.writerow([timestr, model_name, seed_number, num_of_samples])
 
-    print(countcc)
     np.savetxt("diversity.txt", a)
 
-    print(is_err_collection)
     if is_err_collection == '1':  # Collect Data for RQ2 RQ3
         if err_type == '1' or err_type == '2':  # normal data
             file_path_img = '../Violated images/erimages/model_' + str(model_name) + '/'
@@ -471,10 +466,7 @@ def error_test():
 
 
 if __name__ == '__main__':
-    a = error_test()
-    print(type(a))
-    print(a)
-    pricount, div, error_list = a
+    pricount, div, error_list = error_test()
     error_count = './error_count.csv'
     with open(error_count, 'a+', encoding='utf-8') as f:
         csv_writer = csv.writer(f)

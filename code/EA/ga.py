@@ -23,7 +23,6 @@ class Individual:
     def get_fitness(self, F, data_collection_para):
         fitness, error_number, list_er = F(self.dna, self.pop_seed_name, self.error_number, self.choose_time,
                                            self.list_er, data_collection_para)
-        print(type(fitness))
         return fitness, error_number, list_er
 
     def cross(self, p1, p2):
@@ -142,7 +141,6 @@ class ga:
                 for j in range(len(self.domain)):
                     item = self.domain[j]
                     P_dna[i, j] = random.randint(item[0], item[1])
-            print(P_dna)
             P = []
             Seed_ini = []
             Sample_predict = []
@@ -163,7 +161,6 @@ class ga:
                 with open('r_list.csv', 'a+', encoding='utf-8') as l:  # save entropy
                     cw = csv.writer(l)
                     cw.writerow([seed, P_dna[j], cal_number])
-                print(Sample_predict)
 
             Sample_predict = np.array(Sample_predict)
             result = np.argsort(-Sample_predict)
@@ -175,8 +172,6 @@ class ga:
                     choose[loc] = choose[loc] + 1
                     choose_result.append(result[m])
 
-            print(choose_result)
-
             for m in range(self.pop_size):
                 P.append(Individual(P_dna[choose_result[m]], Seed_ini[choose_result[m]]))
 
@@ -186,12 +181,10 @@ class ga:
                 data_collection_para):  # data_collection_para : [is_new_seed(for entropy), is_err_collection(collect err or not), err_type(collect normal(1)/sampling(2)/random data(3))]
         for p in R:
             p.f, p.error_number, p.list_er = p.get_fitness(self.f_funcs, data_collection_para)
-            print(p.f)
 
     def select(self, R):
         R.sort()
         choose_number = [0, 0]
-        # print(len(R))
         pop = []
         for i in range(2):
             randomnumber1 = random.randint(0, self.pop_size - 1)
