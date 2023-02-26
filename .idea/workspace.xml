@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c573281-db56-4bdf-94b3-fea7ccd0b191" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/code/EA/fit_funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/fit_funcs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/EA/fuzz_ga.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/fuzz_ga.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/EA/ga.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/ga.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/EA/ga_error_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/ga_error_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/EA/generate_carla.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/generate_carla.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/EA/rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/rename.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/EA/sampling.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/sampling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/EA/set_para.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/set_para.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/EA/simulation_carla.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/simulation_carla.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/scenario_runner-0.9.13/srunner/scenarioconfigs/openscenario_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/scenario_runner-0.9.13/srunner/scenarioconfigs/openscenario_configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/scenario_runner-0.9.13/manual_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/scenario_runner-0.9.13/manual_control.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

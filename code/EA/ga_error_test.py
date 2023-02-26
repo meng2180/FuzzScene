@@ -433,7 +433,7 @@ def error_test():
 
     if is_err_collection == '1':  # Collect Data for RQ2 RQ3
         if err_type == '1' or err_type == '2':  # normal data
-            file_path_img = '../Violated images/erimages/model_' + str(model_name) + '/'
+            file_path_img = '../Violated images/err_images/model_' + str(model_name) + '/'
             if err_type == '2':  # sampling data
                 file_path_sam = '../Violated images/sampling/model_' + str(model_name) + '/error.csv'
                 with open(file_path_sam, 'a+', encoding='utf-8') as f:

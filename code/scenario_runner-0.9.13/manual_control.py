@@ -906,13 +906,13 @@ class CameraManager(object):
             number_record = number_record + 1
             if number_record > 15 and number_record <= 140:
                 frameid = image.frame + rannumber
-                image.save_to_disk('/home/software/FuzzScene/code/scenario_runner-0.9.13/_out/center/%08d' % frameid)
+                image.save_to_disk('../scenario_runner-0.9.13/_out/center/%08d' % frameid)
                 image_name = "%08d" % frameid
                 steering = player.get_control().steer
                 list_1 = [str(image_name) + ".png", steering, steering * 4]
                 #list_1 = [str(image_name) + ".png", str(seed_name), steering * 4, number_record-15]
 
-                file_path = '/home/software/FuzzScene/code/scenario_runner-0.9.13/_out/label_test.csv'
+                file_path = '../scenario_runner-0.9.13/_out/label_test.csv'
 
                 with open(file_path, 'a+', encoding='utf-8') as f:
                     csv_writer = csv.writer(f)
