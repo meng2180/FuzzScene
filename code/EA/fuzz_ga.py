@@ -8,7 +8,12 @@ f_funcs, domain = get_zdt()
 pop_size = 24
 dna_size = len(domain)
 pm = 0.05
-
+DSL_config = [
+    ['Entities', ['ScenarioObject', 'adversary'], 'Vehicle', 'Properties', 'Property', 'color'],
+    ['Storyboard', 'Init', 'Actions', 'GlobalAction', 'EnvironmentAction', ['Environment', 'Environment1'],
+     ['TimeOfDay']],
+    ['Storyboard', 'Init', 'Actions', 'GlobalAction', 'EnvironmentAction', ['Environment', 'Environment1'],]
+]
 if_sampling = True
 is_err_collection = 1
 
@@ -38,10 +43,8 @@ N = 25
 for i in range(N):
     # Selection
     P, R = ga.select(R)  # P:selected_seed, R:all_seed
-    # Cross
-    Q = ga.pop_cross(P, i + 1)
-    # Mutation
-    Q = ga.pop_mutation(Q)
+    # LCST-based-Mutation
+    Q = ga.lcst_based_mutation(P, i, DSL_config)
     # Simulation
     ga.run_sim(R, [False, 0, 0])
     ga.run_sim(Q, [True, is_err_collection, 1])

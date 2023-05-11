@@ -224,6 +224,11 @@ class ga:
             q.mutation(self.domain, self.pm)
         return Q
 
+    def lcst_based_mutation(self, P, i, DSL_config):
+        DSL_config = []
+        q = self.pop_cross(P, i + 1)
+        q = self.pop_mutation(q)
+        return q
     def calulate_pop(self, R):
         R.sort()
         return R[:50]
