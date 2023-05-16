@@ -1,9 +1,9 @@
 import shutil
 
 model_name = "1"
-if_sampling = "True"
-fitness_func = "all"
-output = "./error_count_" + model_name + "_" + if_sampling + "_" + fitness_func + ".csv"
+model_name="1"
+if_sampling="True"
+fitness_func="div"
 print("************************************************************************************")
 print(output)
 shutil.copy("./error_count.csv", output)

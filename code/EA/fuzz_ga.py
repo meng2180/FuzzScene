@@ -8,14 +8,18 @@ f_funcs, domain = get_zdt()
 pop_size = 24
 dna_size = len(domain)
 pm = 0.05
+
+
+if_sampling = False
+is_err_collection = 0
+
 DSL_config = [
     ['Entities', ['ScenarioObject', 'adversary'], 'Vehicle', 'Properties', 'Property', 'color'],
-    ['Storyboard', 'Init', 'Actions', 'GlobalAction', 'EnvironmentAction', ['Environment', 'Environment1'],
-     ['TimeOfDay']],
-    ['Storyboard', 'Init', 'Actions', 'GlobalAction', 'EnvironmentAction', ['Environment', 'Environment1'],]
+    ['Storyboard', 'Init', 'Actions', 'GlobalAction', 'EnvironmentAction', 'Environment', 'TimeOfDay'],
+    ['Storyboard', 'Init', 'Actions', 'GlobalAction', 'EnvironmentAction', 'Environment', 'TimeOfDay','Weather', 'Fog'],
+    ['Storyboard', 'Init', 'Actions', 'GlobalAction', 'EnvironmentAction', 'Environment', 'TimeOfDay','Weather', 'Precipitation'],
+    ['Storyboard', 'Init', 'Actions', 'GlobalAction', 'EnvironmentAction', 'Environment', 'TimeOfDay','Weather', 'Sun']
 ]
-if_sampling = True
-is_err_collection = 1
 
 a = np.random.random_integers(0, 0, size=(6, 125))
 

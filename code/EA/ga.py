@@ -2,6 +2,10 @@ import numpy as np
 import random
 import fit_funcs
 from sampling import *
+import xml.dom.minidom
+from xml.dom import minidom
+import os
+
 
 
 class Individual:
@@ -109,6 +113,46 @@ class Individual:
                 self.dna[j] = y
         print(self.dna)
 
+def parse_xml(file_path):
+    dom = minidom.parse(file_path)
+    root = dom.documentElement
+    return root
+
+def get_child_nodes(node):
+    return [child for child in node.childNodes if child.nodeType == minidom.Node.ELEMENT_NODE]
+
+def is_node_equal(node1, node2):
+    return node1.toxml() == node2.toxml()
+
+def find_largest_common_subtree(root1, root2):
+    if is_node_equal(root1, root2):
+        return root1
+
+    children1 = get_child_nodes(root1)
+    children2 = get_child_nodes(root2)
+
+    for child1 in children1:
+        for child2 in children2:
+            common_subtree = find_largest_common_subtree(child1, child2)
+            if common_subtree:
+                return common_subtree
+
+    return None
+
+def remove_node(node):
+    if node.parentNode:
+        node.parentNode.removeChild(node)
+
+def find_all_common_parts(root1, root2):
+    common_parts = []
+    while True:
+        common_subtree = find_largest_common_subtree(root1, root2)
+        if common_subtree:
+            common_parts.append(common_subtree)
+            remove_node(common_subtree)
+        else:
+            break
+    return common_parts
 
 class ga:
     def __init__(self, pop_size, dna_size, pc, pm, f_funcs, domain):
@@ -208,7 +252,10 @@ class ga:
             R[choose_number[1]].choose_time = R[choose_number[1]].choose_time + 1
         return pop, R
 
-    def pop_cross(self, P, iterate_time):
+    def pop_cross(self, P, iterate_time, dsl):
+        q = []
+        for d in dsl:
+            q.append(d)
         new_Q = []
         i = 0
         P_len = len(P)
@@ -225,14 +272,35 @@ class ga:
         return Q
 
     def lcst_based_mutation(self, P, i, DSL_config):
-        DSL_config = []
-        q = self.pop_cross(P, i + 1)
+        lcst = []
+        for i in range(2):
+            s1 = P[i].pop_seed_name
+            s2 = P[i+1].pop_seed_name
+            xml1 = "../seed_pool/" + s1
+            xml2 = "../seed_pool/" + s2
+            root1 = xml.dom.minidom.parse(xml1)
+            root2 = xml.dom.minidom.parse(xml2)
+            while True:
+                common_subtree = find_largest_common_subtree(root1, root2)
+                if common_subtree:
+                    lcst.append(common_subtree)
+                    remove_node(common_subtree)
+                else:
+                    break
+            print(lcst)
+        dsl_tree = []
+        for dsl in DSL_config:
+            for tree in lcst:
+                tag = tree.getElementsByTagName(dsl[0])
+                dsl_tree.append(tag)
+        q = self.pop_cross(P, i + 1, dsl_tree)
         q = self.pop_mutation(q)
         return q
+
     def calulate_pop(self, R):
         R.sort()
         return R[:50]
-
+        
     def calculate_pop_fitness(self, R):
         fit_funcs.cal_fitness(R)
         normalization = []
@@ -242,4 +310,4 @@ class ga:
         min_val = min(normalization)
         minus = max_val - min_val if max_val - min_val != 0 else 1
         for r in R:
-            r.f[0] += r.f[1] + (r.f[2] - min_val) / minus
+            r.f[0] += 0
