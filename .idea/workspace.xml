@@ -5,10 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c573281-db56-4bdf-94b3-fea7ccd0b191" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/FuzzScene.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FuzzScene.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/code/main/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/EA/fuzz_ga.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/fuzz_ga.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/EA/ga.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EA/ga.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/.idea/GA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/.idea/GA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/code/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/diversity.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/diversity.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/diversity_count.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/diversity_count.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/entropy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/entropy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/error_count.csv" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/error_count.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/error_count_null.csv" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/error_count_null.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/fit_funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/fit_funcs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/fuzz_ga.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/fuzz_ga.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/ga.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/ga.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/ga_error_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/ga_error_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/ga_output/entropy/entropy.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/ga_output/entropy/entropy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/ga_sim.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/ga_sim.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/generate_carla.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/generate_carla.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/list.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/r_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/r_list.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/r_list_null.csv" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/r_list_null.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/rename.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/rename.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/sample_num.csv" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/sample_num.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/sample_num_vgg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/sample_num_vgg.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/sampling.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/sampling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/sampling_predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/sampling_predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/set_para.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/set_para.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EA/simulation_carla.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/main/simulation_carla.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

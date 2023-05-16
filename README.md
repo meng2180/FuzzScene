@@ -16,7 +16,7 @@ This repository is for providing the basic data and code for our approach.
   
     this subdirectory includes code, basic data, trained models and some scripts for demonstrating our experiments.
   
-    + the `EA` folder saves the main code of our algorithms
+    + the `main` folder saves the main code of our algorithms
     + the `env` folder saves two anaconda env used in experiments
     + the `sampling_vgg` folder saves the VGG-Net models for our sampling algorithm
     + the `seed_pool` folder saves the six basic Open Scenario scenes
@@ -52,13 +52,13 @@ Because the trained model files in our code is too large, we provide Google Driv
 
 We have made three scripts for conducting our experiments.
 
-First, change the anaconda path code in `FuzzScene/code/EA/ga_sim.sh` to your anaconda path, and make sure the `CARLA_0.9.13` folder and the `FuzzScene` folder are in the same folder
+First, change the anaconda path code in `FuzzScene/code/main/ga_sim.sh` to your anaconda path, and make sure the `CARLA_0.9.13` folder and the `FuzzScene` folder are in the same folder
 
-then change the current anaconda environment to dave and get into the EA folder.
+then change the current anaconda environment to dave and get into the main folder.
 
 ```bash
 conda activate dave
-cd FuzzScene/code/EA
+cd FuzzScene/code/main
 ```
 
 Then you can run the **first** script to set basic parameter for experiments.

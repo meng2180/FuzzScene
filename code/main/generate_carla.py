@@ -14,7 +14,7 @@ from ga_error_test import *
 model_name = "1"
 
 
-model_name = "1"
+def vehicleRandomization(name, red, green, blue, var_map, e):
     scenario_obj = e.getElementsByTagName("ScenarioObject")
     for obj in scenario_obj:
         if obj.getAttribute("name") == name:
