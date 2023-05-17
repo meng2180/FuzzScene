@@ -1,4 +1,4 @@
-# Semantic-Guided Scene Fuzzing for Virtual Testing of Autonomous Driving Systems
+# Semantic-Guided Fuzzing for Virtual Testing of Autonomous Driving Systems
 This repository is for providing the basic data and code for our approach.
 
 <div align=center><img width="85%" height="80%" src="https://anonymous.4open.science/r/FuzzScene-3133/gif/ArrowedAngle_ori.gif"/></div>
