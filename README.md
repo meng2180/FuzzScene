@@ -82,3 +82,16 @@ python rename.py
 
 Data will be moved to the folder **ga_output**, including the **file of errors** found by algorithm, which will be renamed by model name, whether conduct sampling step, and the fitness function been chose,  the **entropy** file in entropy folder, and the **r_list** file for details of experiments in r_list folder
 
+## Citation
+
+```shell
+@article{guo2024semantic,
+  title={Semantic-guided fuzzing for virtual testing of autonomous driving systems},
+  author={Guo, An and Feng, Yang and Cheng, Yizhen and Chen, Zhenyu},
+  journal={Journal of Systems and Software},
+  volume={212},
+  pages={112017},
+  year={2024},
+  publisher={Elsevier}
+}
+```
