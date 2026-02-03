@@ -2,7 +2,9 @@
 This repository is for providing the basic data and code for our approach.
 
 <div align=center><img width="85%" height="80%" src="https://anonymous.4open.science/r/FuzzScene-3133/gif/ArrowedAngle_ori.gif"/></div>
-<div align=center><img width="85%" height="80%" src="https://anonymous.4open.science/r/FuzzScene-3133/gif/ArrowedAngle_mut.gif"/></div>
+<div align=center><img width="85%" height="80%" src="https://github.com/meng2180/FuzzScene/blob/main/gif/ArrowedAngle_mut.gif"/></div>
+
+
 
 ## Repository Structure
 
